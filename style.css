@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(#a473e9, #454ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.box {
+    width: 680px;
+    background-color: #fefefe;
+    border-radius: 10px;
+    padding: 20px;
+    transition: width 0.5s ease;
+}
+
+.box .heading h1 {
+    text-transform: uppercase;
+    color: #545454;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    transition: flex-direction 0.5s ease;
+}
+
+#user_textArea {
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #454ba2;
+    font-size: 1rem;
+    transition: width 0.5s ease;
+}
+
+.countvowels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.countvowels h2 {
+    color: #545454;
+}
+
+.show_vowel_letter {
+    background-color: #454ba2;
+    /* padding: 20px 30px; */
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fefefe;
+    font-size: 1.5rem;
+    transition: addborshadow 0.5s ease;
+}
+
+.addborshadow {
+    box-shadow: 0 0 20px #353c98;
+}
+
+@media only screen and (max-width: 680px) {
+    .box {
+        width: 500px;
+    }
+    #user_textArea {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .box {
+        width: 400px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    #user_textArea {
+        width: calc(400px - 40px);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .box {
+        width: 350px;
+    }
+    #user_textArea {
+        width: calc(350px - 40px);
+    }
+    .box .heading h1 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .box {
+        width: 300px;
+    }
+    #user_textArea {
+        width: calc(300px - 40px);
+    }
+    .box .heading h1 {
+        font-size: 1.5rem;
+    }
+}
